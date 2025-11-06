@@ -89,6 +89,21 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 </tr>
 </table>
 
+### Bar Plots
+
+<table>
+<tr>
+<td><img src="Subject1%20BarPlot.png" alt="Subject 1 BarPlot" width="300"/></td>
+<td><img src="Subject2%20Barplot.png" alt="Subject 2 BarPlot" width="300"/></td>
+<td><img src="Subject3%20Barplot.png" alt="Subject 3 BarPlot" width="300"/></td>
+</tr>
+<tr>
+<td>Subject 1</td>
+<td>Subject 2</td>
+<td>Subject 3</td>
+</tr>
+</table>
+
 ### 3D RSA Surface
 
 <table>
