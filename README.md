@@ -37,7 +37,7 @@ This analysis examines:
 - **Early visual areas (V1/V2)**
 - **Mid-level visual areas (LOC, OPA)**
 - **High-level scene/object areas (PPA, RSC)**
-- **Layer-wise representations of ResNet-50**
+- **Layer-wise representations of ResNet-50 (5-Layers)**
 
 The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
 
@@ -46,12 +46,12 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 ## Data
 
 This project uses data derived from the BOLD5000 Additional ROIs and RDMs for Neural Network Research dataset
-(Pickard et al., 2023), a derivative of BOLD5000 Release 2.0 (Chang et al., 2021). The dataset extends the original BOLD5000 study by providing new region-of-interest (ROI) definitions, beta activation vectors, and representational dissimilarity matrices (RDMs)
+(Pickard et al., 2023), a derivative of BOLD5000 Release 2.0 (Chang et al., 2021). The dataset extends the original BOLD5000 study by providing new region-of-interest (ROI) definitions, beta activation vectors, and representational dissimilarity matrices (RDMs).
 
-- **BOLD5000 fMRI dataset**: preprocessed ROI-level RDMs per subject  
-- **ResNet-50**: precomputed RDMs for each convolutional block/layer  
+- **BOLD5000 fMRI dataset**: preprocessed ROI-level RDMs per subject
+- **ResNet-50**: precomputed RDMs for each convolutional block/layer 
 - **Images**: 2985 images shared across subjects and model for alignment  
-- **ROIs**: 10 cortical regions, including EarlyVisual, LOC, OPA, PPA, RSC  
+- **ROIs**: 10 cortical regions, including EarlyVisual, LOC, OPA, PPA, RSC categorised by hemisphere lateralisation (L/R) 
 
 **Note**: The repository does **not** include raw MRI or image data due to size and licensing restrictions. Scripts expect data paths for `.h5` files.
 
@@ -115,6 +115,44 @@ Full dataset available on Dryad: [https://doi.org/10.5061/dryad.wpzgmsbtr](https
   <img src="3D%20RSA%20SURFACE.png" width="250"/>
 </p>
 
+
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg" style="font-family: Arial; font-size: 12px;">
+  <!-- Timeline Axis -->
+  <line x1="50" y1="150" x2="750" y2="150" stroke="black" stroke-width="2"/>
+  <text x="45" y="165" text-anchor="end">0 ms</text>
+  <text x="170" y="165" text-anchor="middle">50</text>
+  <text x="300" y="165" text-anchor="middle">100</text>
+  <text x="430" y="165" text-anchor="middle">150</text>
+  <text x="560" y="165" text-anchor="middle">200</text>
+  <text x="690" y="165" text-anchor="middle">250</text>
+  <text x="750" y="165" text-anchor="start"> ms</text>
+  
+  <!-- V1 -->
+  <rect x="110" y="10" width="100" height="15" fill="#1f77b4"/><text x="215" y="20" fill="white">V1 (30–50 ms)</text>
+  <!-- V2 -->
+  <rect x="140" y="30" width="100" height="15" fill="#ff7f0e"/><text x="245" y="40" fill="white">V2 (40–60 ms)</text>
+  <!-- LOC -->
+  <rect x="350" y="50" width="100" height="15" fill="#2ca02c"/><text x="455" y="60" fill="white">LOC (120–150 ms)</text>
+  <!-- OPA -->
+  <rect x="380" y="70" width="100" height="15" fill="#d62728"/><text x="485" y="80" fill="white">OPA (130–160 ms)</text>
+  <!-- PPA -->
+  <rect x="440" y="90" width="150" height="15" fill="#9467bd"/><text x="595" y="100" fill="white">PPA (150–200 ms)</text>
+  <!-- RSC -->
+  <rect x="530" y="110" width="150" height="15" fill="#8c564b"/><text x="685" y="120" fill="white">RSC (180–220 ms)</text>
+  
+  <!-- Labels -->
+  <text x="50" y="20">Early visual features</text>
+  <text x="50" y="40">Early visual features</text>
+  <text x="50" y="60">Object recognition</text>
+  <text x="50" y="80">Scene perception</text>
+  <text x="50" y="100">Scene/landmark recognition</text>
+  <text x="50" y="120">Navigation/spatial context</text>
+  
+  <!-- Hierarchy Arrow -->
+  <path d="M100 140 Q200 130 300 140 Q400 150 500 140 Q600 130 700 140" stroke="gray" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="gray"/></marker></defs>
+  <text x="400" y="170" text-anchor="middle" style="font-style:italic;">Hierarchy: V1 → V2 → LOC/OPA/PPA → RSC</text>
+</svg>
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
