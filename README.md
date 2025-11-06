@@ -5,7 +5,6 @@ This repository contains code and analysis comparing **ResNet-50 model RDMs** wi
 ---
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![License](https://img.shields.io/github/license/Arsen1g/CNN-VISCRTX-CORR)
-![Stars](https://img.shields.io/github/stars/Arsen1g/CNN-VISCRTX-CORR?style=social)
 ![RSA Toolbox](https://img.shields.io/badge/rsatoolbox-v0.1.5-green)
 
 ## Table of Contents
