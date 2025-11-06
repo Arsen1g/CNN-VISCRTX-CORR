@@ -95,27 +95,27 @@ aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
 ### 2. Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr').
 
 ```python
-# RSA per subject
-all_corrs = []
-for subj_name, roi_rdms in subjects.items():
-    for roi, brain_rdm in roi_rdms.items():
-        res = inference.eval_fixed(models, brain_rdm, method='corr')
-        corrs = np.array(res.evaluations).flatten()
-        for i, layer in enumerate([m.name for m in models]):
-            all_corrs.append({"Subject": subj_name, "ROI": roi, "Layer": layer, "r": corrs[i]})
+# RSA per each Subject
+all_corrs = [
+    {"Subject": s, "ROI": r, "Layer": m.name, "r": v}
+    for s, roi_rdms in subjects.items()
+    for r, brain_rdm in roi_rdms.items()
+    for m, v in zip(models, np.array(inference.eval_fixed(models, brain_rdm, method='corr').evaluations).flatten())
+]
 
-# Combine across subjects (average RDMs)
+# RSA Averaged Across All Subjects combined
 joint_corrs = []
-roi_names = list(subjects['subj1'].keys())
-for roi in roi_names:
-    avg_diss = np.mean([subjects[subj][roi].dissimilarities[0] for sub in subjects], axis=0)
-    joint_rdm = rdm.RDMs(avg_diss[np.newaxis, :], dissimilarity_measure='correlation',
-                          pattern_descriptors={'image': common_patterns},
-                          rdm_descriptors={'roi': [roi]})
-    res = inference.eval_fixed(models, joint_rdm, method='corr')
-    corrs = np.array(res.evaluations).flatten()
-    for i, layer in enumerate([m.name for m in models]):
-        joint_corrs.append({"ROI": roi, "Layer": layer, "r": corrs[i]})
+for roi in subjects['subj1']:
+    avg_rdm = rdm.RDMs(
+        np.mean([subjects[s][roi].dissimilarities[0] for s in subjects], axis=0)[np.newaxis, :],
+        dissimilarity_measure='correlation',
+        pattern_descriptors={'image': common_patterns},
+        rdm_descriptors={'roi': [roi]}
+    )
+    joint_corrs.extend(
+        {"ROI": roi, "Layer": m.name, "r": v}
+        for m, v in zip(models, np.array(inference.eval_fixed(models, avg_rdm, method='corr').evaluations).flatten())
+    )
 ```
 
 ROIs were grouped hierarchically:
