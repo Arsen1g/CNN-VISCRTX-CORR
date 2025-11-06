@@ -101,6 +101,28 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 
 <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
 
+<details>
+<summary>📊 Heatmaps & Bar Plots</summary>
+
+<!-- Your table of paired heatmaps + barplots -->
+
+</details>
+
+<details>
+<summary>🔁 Scatter Plots</summary>
+
+<img src="ScatterPlot%20Subset%20ROI.png" width="600"/>
+
+</details>
+
+<details>
+<summary>🧬 3D RSA Surface</summary>
+
+<img src="3D%20RSA%20SURFACE.png" width="600"/>
+
+</details>
+
+
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
