@@ -67,7 +67,7 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 # Between-Subjects
 
 Subject 1
-![Alt text](images/your-image.png)
+![Alt text](images/subject1_Heatmap.png)
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
