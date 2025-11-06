@@ -101,13 +101,6 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 
 <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
 
-<table>
-<tr>
-  <td><img src="subject1_Heatmap.png" width="300"/></td>
-  <td><img src="resnet_layer4_Heatmap.png" width="300"/></td>
-</tr>
-<tr><td>Human ROI</td><td>ResNet-50 Layer 4</td></tr>
-</table>
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
