@@ -85,14 +85,14 @@ Methods & Key Findings
 
 Methods
 
-1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
+### 1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
 aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
 ```
 
-Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr').
+### 2. Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr').
 
 ```python
 # RSA per subject
@@ -121,16 +121,16 @@ for roi in roi_names:
 ROIs were grouped hierarchically:
 
 Early visual: LHEarlyVis, RHEarlyVis
-
 Mid-level: LHLOC, RHLOC, LHOPA, RHOPA
-
 High-level: LHPPA, RHPPA, LHRSC, RHRSC
 
 Mean ± SEM correlations were calculated across subjects and visualized via heatmaps, line plots, and scatter plots across layers.
 
-Key Findings
 
-Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
+## Key Findings
+
+### Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
+<img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
 
 Early visual areas align primarily with lower-to-mid ResNet layers, while higher-level ROIs align with deeper layers.
 
