@@ -32,6 +32,7 @@ This repository contains code and analysis comparing **ResNet-50 model RDMs** wi
 ## Motivation
 
 Understanding how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI**.  
+
 This analysis examines:
 
 - **Early visual areas (V1/V2)**
@@ -41,7 +42,7 @@ This analysis examines:
 
 The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
 
-# Visual System Hierarchical Latencies
+### Visual System Hierarchical Latencies
 
 This table summarizes approximate onset latencies for key visual cortical areas in humans after seeing a stimulus. Latencies are based on EEG, MEG, and iEEG studies.
 
