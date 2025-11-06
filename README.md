@@ -130,8 +130,6 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 ## Key Findings
 
 #### Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
-<img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
-<img src="Joint%20Heatmap%20(3%20subjects).png" alt="Joint Heatmap 3 Subjects" width="500"/>
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
   <div>
@@ -150,11 +148,10 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 ---
 
-
-## Visualizations per subject
+## Visualisations per Subject
 
 <details>
-  <summary>Show Heatmaps & Bar Plots per Subject</summary>
+  <summary>Subject 1</summary>
 
   <table>
     <tr>
@@ -165,7 +162,14 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
       <td>Subject 1 Heatmap</td>
       <td>Subject 1 Bar Plot</td>
     </tr>
+  </table>
 
+</details>
+
+<details>
+  <summary>Subject 2</summary>
+
+  <table>
     <tr>
       <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
       <td><img src="Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td>
@@ -174,7 +178,14 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
       <td>Subject 2 Heatmap</td>
       <td>Subject 2 Bar Plot</td>
     </tr>
+  </table>
 
+</details>
+
+<details>
+  <summary>Subject 3</summary>
+
+  <table>
     <tr>
       <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
       <td><img src="Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td>
@@ -186,6 +197,7 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
   </table>
 
 </details>
+
 
 
 ## References
