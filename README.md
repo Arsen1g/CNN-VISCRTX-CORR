@@ -18,7 +18,7 @@ https://doi.org/10.7554/eLife.82566_
 
 - [Motivation](#motivation)
 - [Data](#data)
-- [Methods](#methods)
+- [Methods](#Methods-&-Key-Findings)
 - [Pattern Alignment](#pattern-alignment)
 - [ROI Selection](#roi-selection)
 - [Model Preparation](#model-preparation)
