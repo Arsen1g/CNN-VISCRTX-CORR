@@ -148,53 +148,46 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 #### Early visual areas align primarily with lower-to-mid ResNet layers, while higher-level ROIs align with deeper layers.
 <img src="ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
 
-These results indicate a  hierarchical alignment between ResNet-50 layers and human visual cortical regions.
-
 ---
 
 
-## Visualizations
+## Visualizations per subject
 
-### Heatmaps & Bar Plots Side by Side
+<details>
+  <summary>Show Heatmaps & Bar Plots per Subject</summary>
 
-<table>
-<tr>
-  <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
-  <td><img src="Subject1%20BarPlot.png" alt="Subject 1 Bar Plot" width="300"/></td>
-</tr>
-<tr>
-  <td>Subject 1 Heatmap</td>
-  <td>Subject 1 Bar Plot</td>
-</tr>
+  <table>
+    <tr>
+      <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
+      <td><img src="Subject1%20BarPlot.png" alt="Subject 1 Bar Plot" width="300"/></td>
+    </tr>
+    <tr>
+      <td>Subject 1 Heatmap</td>
+      <td>Subject 1 Bar Plot</td>
+    </tr>
 
-<tr>
-  <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
-  <td><img src="Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td>
-</tr>
-<tr>
-  <td>Subject 2 Heatmap</td>
-  <td>Subject 2 Bar Plot</td>
-</tr>
+    <tr>
+      <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
+      <td><img src="Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td>
+    </tr>
+    <tr>
+      <td>Subject 2 Heatmap</td>
+      <td>Subject 2 Bar Plot</td>
+    </tr>
 
-<tr>
-  <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
-  <td><img src="Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td>
-</tr>
-<tr>
-  <td>Subject 3 Heatmap</td>
-  <td>Subject 3 Bar Plot</td>
-</tr>
-</table>
+    <tr>
+      <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
+      <td><img src="Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td>
+    </tr>
+    <tr>
+      <td>Subject 3 Heatmap</td>
+      <td>Subject 3 Bar Plot</td>
+    </tr>
+  </table>
 
-### Scatter Plots
+</details>
 
-<img src="ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
 
-### 3D RSA Surface
-
-<img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
-
-## References
 ## References
 
 - Baldassano, C., Esteva, A., Fei-Fei, L., & Beck, D. (2016). Two distinct scene-processing networks in human cortex. *Journal of Neuroscience, 36*(3), 1150–1164.  
