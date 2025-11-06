@@ -57,6 +57,18 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 - Extracted common images across all subjects and model: 2985 patterns  
 - Subsetted all RDMs to shared image patterns using **rsatoolbox**:
 
+---
+
+
+## Visualisation
+
+### Heatmaps 
+
+# Between-Subjects
+
+Subject 1
+![Alt text](images/your-image.png)
+
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
 aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
