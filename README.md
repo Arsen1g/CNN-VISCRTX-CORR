@@ -85,9 +85,38 @@ Methods & Key Findings
 
 Methods
 
-ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
+1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
+
+```python
+aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
+aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
+```
 
 Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr').
+
+```python
+# RSA per subject
+all_corrs = []
+for subj_name, roi_rdms in subjects.items():
+    for roi, brain_rdm in roi_rdms.items():
+        res = inference.eval_fixed(models, brain_rdm, method='corr')
+        corrs = np.array(res.evaluations).flatten()
+        for i, layer in enumerate([m.name for m in models]):
+            all_corrs.append({"Subject": subj_name, "ROI": roi, "Layer": layer, "r": corrs[i]})
+
+# Combine across subjects (average RDMs)
+joint_corrs = []
+roi_names = list(subjects['subj1'].keys())
+for roi in roi_names:
+    avg_diss = np.mean([subjects[subj][roi].dissimilarities[0] for sub in subjects], axis=0)
+    joint_rdm = rdm.RDMs(avg_diss[np.newaxis, :], dissimilarity_measure='correlation',
+                          pattern_descriptors={'image': common_patterns},
+                          rdm_descriptors={'roi': [roi]})
+    res = inference.eval_fixed(models, joint_rdm, method='corr')
+    corrs = np.array(res.evaluations).flatten()
+    for i, layer in enumerate([m.name for m in models]):
+        joint_corrs.append({"ROI": roi, "Layer": layer, "r": corrs[i]})
+```
 
 ROIs were grouped hierarchically:
 
@@ -167,55 +196,6 @@ These results indicate a clear hierarchical alignment between ResNet-50 layers a
 - Schmolesky, M. T., Wang, Y., Hanes, D. P., Thompson, K. G., Leutgeb, S., Schall, J. D., & Leventhal, A. G. (1998). Signal timing across the macaque visual system. *Journal of Neurophysiology, 79*(6), 3272–3278.  
 - Vann, S. D., Aggleton, J. P., & Maguire, E. A. (2009). What does the retrosplenial cortex do? *Nature Reviews Neuroscience, 10*, 792–802.
 - 
-
-Methods & Key Findings
-Methods
-
-Data Alignment: ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2,985 common images.
-
-RSA Computation: Fixed-model Representational Similarity Analysis (RSA) was computed per ROI:
-
-eval_fixed(models, brain_rdm, method='corr')
-
-
-ROI Grouping: ROIs were categorized hierarchically:
-
-Early Visual: LHEarlyVis, RHEarlyVis
-
-Mid-Level Visual: LHLOC, RHLOC, LHOPA, RHOPA
-
-High-Level Visual: LHPPA, RHPPA, LHRSC, RHRSC
-
-Statistics: Mean ± SEM correlations were calculated across subjects.
-
-Visualization: Heatmaps, bar plots, scatter plots, and 3D surfaces were generated across ResNet-50 layers.
-
-Key Findings
-
-Layer-Specific Alignment: Layer 3 of ResNet-50 shows the strongest correlation with both early and higher visual ROIs.
-
-Hierarchical Pattern:
-
-Early visual areas align primarily with lower-to-mid ResNet layers.
-
-Higher-level visual ROIs align with deeper layers.
-
-Conclusion: Clear hierarchical correspondence exists between deep neural network representations and human visual cortical activity.
-
-Visualizations
-Heatmaps & Bar Plots (Side by Side)
-
-Heatmaps show ROI-wise RSA correlations, while bar plots summarize mean correlations across layers. Side-by-side layout enables easy comparison.
-
-<table> <tr> <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td> <td><img src="Subject1%20BarPlot.png" alt="Subject 1 Bar Plot" width="300"/></td> </tr> <tr> <td>Subject 1 Heatmap</td> <td>Subject 1 Bar Plot</td> </tr> <tr> <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td> <td><img src="Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td> </tr> <tr> <td>Subject 2 Heatmap</td> <td>Subject 2 Bar Plot</td> </tr> <tr> <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td> <td><img src="Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td> </tr> <tr> <td>Subject 3 Heatmap</td> <td>Subject 3 Bar Plot</td> </tr> </table>
-Scatter Plots
-
-Scatter plots visualize correlation between ResNet-50 layers and ROI RDMs for individual or averaged subjects.
-
-3D RSA Surface
-
-The 3D RSA surface provides an interactive view of layer-wise similarity across ROIs, highlighting hierarchical alignment across cortical regions.
-
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
