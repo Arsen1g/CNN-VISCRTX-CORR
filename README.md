@@ -1,10 +1,9 @@
 # RSA Analysis: ResNet-50 vs BOLD5000
 
-This repository contains code and analysis comparing **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the hierarchical alignment between deep neural network layers and visual cortical regions across multiple subjects.
+This repository explains the analysis comparing **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the alignment between deep neural network layers and visual cortical regions across multiple subjects.
 
 ---
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![License](https://img.shields.io/github/license/Arsen1g/CNN-VISCRTX-CORR)
 ![RSA Toolbox](https://img.shields.io/badge/rsatoolbox-v0.1.5-green)
 
 ## Contents
