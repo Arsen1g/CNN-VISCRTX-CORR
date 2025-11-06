@@ -7,25 +7,26 @@ This repository contains code and analysis comparing **ResNet-50 model RDMs** wi
 ![License](https://img.shields.io/github/license/Arsen1g/CNN-VISCRTX-CORR)
 ![RSA Toolbox](https://img.shields.io/badge/rsatoolbox-v0.1.5-green)
 
-## Table of Contents
+## Contents
 
-- [Motivation](#motivation)  
-- [Data](#data)  
-- [Methods](#methods)  
-  - [Pattern Alignment](#pattern-alignment)  
-  - [ROI Selection](#roi-selection)  
-  - [Model Preparation](#model-preparation)  
-  - [RSA Analysis](#rsa-analysis)  
-- [Visualizations](#visualizations)  
-  - [Heatmaps](#heatmaps)  
-  - [Grouped Bar Plots](#grouped-bar-plots)  
-  - [Scatter Plots](#scatter-plots)  
-  - [Radar Charts](#radar-charts)  
-  - [3D RSA Surface](#3d-rsa-surface)  
-- [Results Summary](#results-summary)  
-- [Reproducibility](#reproducibility)  
-- [Requirements](#requirements)  
-- [References](#references)  
+- [Motivation](#motivation)
+- [Data](#data)
+- [Methods](#methods)
+- [Pattern Alignment](#pattern-alignment)
+- [ROI Selection](#roi-selection)
+- [Model Preparation](#model-preparation)
+- [RSA Analysis](#rsa-analysis)
+- [Visualizations](#visualizations)
+  - [Heatmaps](#heatmaps)
+  - [Grouped Bar Plots](#grouped-bar-plots)
+  - [Scatter Plots](#scatter-plots)
+  - [Radar Charts](#radar-charts)
+  - [3D RSA Surface](#3d-rsa-surface)
+- [Results Summary](#results-summary)
+- [Reproducibility](#reproducibility)
+- [Requirements](#requirements)
+- [References](#references)
+
 
 ---
 
@@ -202,23 +203,16 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 ## References
 
-- Baldassano, C., Esteva, A., Fei-Fei, L., & Beck, D. (2016). Two distinct scene-processing networks in human cortex. *Journal of Neuroscience, 36*(3), 1150–1164.  
-- Carlson, T. A., Tovar, D. A., Alink, A., & Kriegeskorte, N. (2013). Representational dynamics of object vision: The first 1000 ms. *Journal of Vision, 13*(10), 1–19.  
-- Di Russo, F., Martínez, A., Sereno, M. I., Pitzalis, S., & Hillyard, S. A. (2002). Cortical sources of the early components of the visual evoked potential. *Human Brain Mapping, 15*(2), 95–111.  
-- Epstein, R. (2008). Parahippocampal and retrosplenial contributions to human spatial navigation. *Trends in Cognitive Sciences, 12*(10), 388–396.  
-- Foxe, J. J., & Simpson, G. V. (2002). Flow of activation from V1 to frontal cortex in humans: A framework for visual cognition. *Experimental Brain Research, 142*, 139–150.  
-- Golarai, G., Liberman, A., Yoon, J., & Grill-Spector, K. (2010). Differential development of high-level visual cortex: A comparison of face, place, and object areas. *Cerebral Cortex, 20*(5), 1277–1292.  
-- Kamps, F. S., Hendrix, C. L., Brennan, P. A., & Dilks, D. D. (2016). Occipital place area represents the local elements of scenes. *NeuroImage, 142*, 137–149.  
-- Kourtzi, Z., & Kanwisher, N. (2000). Activation in human lateral occipital complex relates to object perception, not object motion. *Nature Neuroscience, 3*, 52–58.  
-- Nowak, L. G., Sanchez-Vives, M. V., & McCormick, D. A. (1995). Mechanisms of bursting in cortical layer 5 neurons in vivo. *Journal of Neurophysiology, 74*(4), 1753–1769.  
-- Rajimehr, R., Devaney, K. J., Bilenko, N. Y., Young, J. C., & Tootell, R. B. (2011). The “parahippocampal place area” responds preferentially to high spatial frequencies. *Neuron, 71*(1), 102–112.  
-- Schmolesky, M. T., Wang, Y., Hanes, D. P., Thompson, K. G., Leutgeb, S., Schall, J. D., & Leventhal, A. G. (1998). Signal timing across the macaque visual system. *Journal of Neurophysiology, 79*(6), 3272–3278.  
-- Vann, S. D., Aggleton, J. P., & Maguire, E. A. (2009). What does the retrosplenial cortex do? *Nature Reviews Neuroscience, 10*, 792–802.
-- 
+- Baldassano, C., Esteva, A., Fei-Fei, L., & Beck, D. M. (2016). Two distinct scene-processing networks connecting vision and memory. Eneuro, 3(5).  
+- Carlson, T., Tovar, D. A., Alink, A., & Kriegeskorte, N. (2013). Representational dynamics of object vision: the first 1000 ms. Journal of vision, 13(10), 1-1.
+- Di Russo, F., Martínez, A., Sereno, M. I., Pitzalis, S., & Hillyard, S. A. (2002). Cortical sources of the early components of the visual evoked potential. Human brain mapping, 15(2), 95-111.  
+- Epstein, R. A. (2008). Parahippocampal and retrosplenial contributions to human spatial navigation. Trends in cognitive sciences, 12(10), 388-396. 
+- Foxe, J. J., & Simpson, G. V. (2002). Flow of activation from V1 to frontal cortex in humans: A framework for defining" early" visual processing. Experimental brain research, 142(1), 139-150.  
+- Golarai, G., Liberman, A., Yoon, J. M., & Grill-Spector, K. (2010). Differential development of the ventral visual cortex extends through adolescence. Frontiers in human neuroscience, 3, 1057.  
+- Kamps, F. S., Julian, J. B., Kubilius, J., Kanwisher, N., & Dilks, D. D. (2016). The occipital place area represents the local elements of scenes. Neuroimage, 132, 417-424.
+- Kourtzi, Z., & Kanwisher, N. (2000). Cortical regions involved in perceiving object shape. Journal of Neuroscience, 20(9), 3310-3318. 
+- Rajimehr, R., Devaney, K. J., Bilenko, N. Y., Young, J. C., & Tootell, R. B. H. (2011). The ‘‘Parahippocampal Place Area’’Responds Preferentially to High Spatial.  
+- Schmolesky, M. T., Wang, Y., Hanes, D. P., Thompson, K. G., Leutgeb, S., Schall, J. D., & Leventhal, A. G. (1998). Signal timing across the macaque visual system. Journal of neurophysiology, 79(6), 3272-3278.  
+- Vann, S. D., Aggleton, J. P., & Maguire, E. A. (2009). What does the retrosplenial cortex do?. Nature reviews neuroscience, 10(11), 792-802.
 
-```python
-aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
-aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
-
-'''
 
