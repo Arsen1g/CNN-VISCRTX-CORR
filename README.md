@@ -5,7 +5,7 @@ This repository explains the analysis comparing **ResNet-50 model RDMs** with **
 This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's *Tutorial on Statistical Inference On Representational Geometries* at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
 
 
-_van den Bosch, J. J., Golan, T., Peters, B., Taylor, J., Shahbazi, M., Lin, B., Charest, I., Diedrichsen, J., Kriegeskorte, N., Mur, M., & Schuett, H. (2025). A Python Toolbox for Representational Similarity Analysis. bioRxiv. https://doi.org/10.1101/2025.05.22.655542
+van den Bosch, J. J., Golan, T., Peters, B., Taylor, J., Shahbazi, M., Lin, B., Charest, I., Diedrichsen, J., Kriegeskorte, N., Mur, M., & Schuett, H. (2025). A Python Toolbox for Representational Similarity Analysis. bioRxiv. https://doi.org/10.1101/2025.05.22.655542
 
 Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) Statistical inference on representational geometries eLife 12:e82566.
 https://doi.org/10.7554/eLife.82566_
@@ -39,7 +39,7 @@ https://doi.org/10.7554/eLife.82566_
 
 ## Motivation
 
-Understanding how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI**.  
+Analysisng how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** and much broader objectives towards interperable analysis of Deep Neural Networks.
 
 This analysis examines:
 
@@ -67,8 +67,7 @@ This table summarizes approximate onset latencies for key visual cortical areas 
 
 ## Data
 
-This project uses data derived from the BOLD5000 Additional ROIs and RDMs for Neural Network Research dataset
-(Pickard et al., 2023), a derivative of BOLD5000 Release 2.0 (Chang et al., 2021). The dataset extends the original BOLD5000 study by providing new region-of-interest (ROI) definitions, beta activation vectors, and representational dissimilarity matrices (RDMs).
+This analysis uses data derived from the BOLD5000 ROIs and RDMs for Neural Network Research dataset (Pickard et al., 2023), a derivative of BOLD5000 Release 2.0 (Chang et al., 2021). The dataset extends the original BOLD5000 study by providing new region-of-interest (ROI) definitions, beta activation vectors, and representational dissimilarity matrices (RDMs). Our study did not compute RDM Corrs.
 
 - **BOLD5000 fMRI dataset**: preprocessed ROI-level RDMs per subject
 - **ResNet-50**: precomputed RDMs for each convolutional block/layer 
@@ -80,7 +79,9 @@ This project uses data derived from the BOLD5000 Additional ROIs and RDMs for Ne
 Full dataset available on Dryad: [https://doi.org/10.5061/dryad.wpzgmsbtr](https://doi.org/10.5061/dryad.wpzgmsbtr)
 
 ### Datasets used for this study
-- ResNet50_CORR_RDMs.h5 
+DNN:
+- ResNet50_CORR_RDMs.h5
+Participants:
 - CSI1_BOLD5000_CORR_RDMs.h5 (*subject 1*)
 - CSI2_BOLD5000_CORR_RDMs.h5 (*subject 2*)
 - CSI3_BOLD5000_CORR_RDMs.h5 (*subject 3*)
@@ -88,9 +89,6 @@ Full dataset available on Dryad: [https://doi.org/10.5061/dryad.wpzgmsbtr](https
 ---
 
 # Methods & Key Findings
- 
-Methods & Key Findings
-
 Methods
 
 ### 1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
@@ -100,7 +98,7 @@ aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
 aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
 ```
 
-### 2. Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr').
+### 2. Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr'). Initial Analysis conducted RSA per subject, subsequent analyses grouped subject by shared stimuli type. One subject from the Pickard et al., (2023) was excluded due to limited sampling.
 
 ```python
 # RSA per each Subject
@@ -126,7 +124,7 @@ for roi in subjects['subj1']:
     )
 ```
 
-ROIs were grouped hierarchically:
+ROIs were grouped hierarchically as per initial literature review (see section on Visual System Hierarchical Latencies)
 
 Early visual: LHEarlyVis, RHEarlyVis
 Mid-level: LHLOC, RHLOC, LHOPA, RHOPA
@@ -134,10 +132,9 @@ High-level: LHPPA, RHPPA, LHRSC, RHRSC
 
 Mean ± SEM correlations were calculated across subjects and visualized via heatmaps, line plots, and scatter plots across layers.
 
-
 ## Key Findings
 
-#### Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
+#### Layer 3 of ResNet-50 shows the strongest RSA correlation across all ROIs.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
   <div>
@@ -151,12 +148,13 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 </div>
 
 
-#### Early visual areas align primarily with lower-to-mid ResNet layers, while higher-level ROIs align with deeper layers.
+#### Early visual areas (v1/v2) initially align with lower-to-mid ResNet layers 1/2, while higher-level ROIs align "bouncback" with larger r- correlations observed towards mid to later levels of ResNet layers. A drop off is observed at ResNet layer 4 which is possibly attributed towards representational divergence (i.e. (Seyed‑Mahdi Khaligh‑Razavi & Nikolaus Krieg­eskorte, 2014), or lack therof to implemennting covariance aware/ flexible models constituting a methadological limitation of using pre-computed RDMs.
+
 <img src="ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
 
 ---
 
-## Visualisations per Subject
+## heatmap and bar plot Visualisations of pearson r correlation per each Subject
 
 <details>
   <summary>Subject 1</summary>
@@ -210,14 +208,16 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 ## References
 
-- Baldassano, C., Esteva, A., Fei-Fei, L., & Beck, D. M. (2016). Two distinct scene-processing networks connecting vision and memory. Eneuro, 3(5).  
+- Baldassano, C., Esteva, A., Fei-Fei, L., & Beck, D. M. (2016). Two distinct scene-processing networks connecting vision and memory. Eneuro, 3(5).
+- Chang, N., Pyles, J., Prince, J., Tarr, M., & Aminoff, E. (2021). BOLD5000 Release 2.0 [Data set]. Carnegie Mellon University. 
 - Carlson, T., Tovar, D. A., Alink, A., & Kriegeskorte, N. (2013). Representational dynamics of object vision: the first 1000 ms. Journal of vision, 13(10), 1-1.
 - Di Russo, F., Martínez, A., Sereno, M. I., Pitzalis, S., & Hillyard, S. A. (2002). Cortical sources of the early components of the visual evoked potential. Human brain mapping, 15(2), 95-111.  
 - Epstein, R. A. (2008). Parahippocampal and retrosplenial contributions to human spatial navigation. Trends in cognitive sciences, 12(10), 388-396. 
 - Foxe, J. J., & Simpson, G. V. (2002). Flow of activation from V1 to frontal cortex in humans: A framework for defining" early" visual processing. Experimental brain research, 142(1), 139-150.  
 - Golarai, G., Liberman, A., Yoon, J. M., & Grill-Spector, K. (2010). Differential development of the ventral visual cortex extends through adolescence. Frontiers in human neuroscience, 3, 1057.  
 - Kamps, F. S., Julian, J. B., Kubilius, J., Kanwisher, N., & Dilks, D. D. (2016). The occipital place area represents the local elements of scenes. Neuroimage, 132, 417-424.
-- Kourtzi, Z., & Kanwisher, N. (2000). Cortical regions involved in perceiving object shape. Journal of Neuroscience, 20(9), 3310-3318. 
+- Kourtzi, Z., & Kanwisher, N. (2000). Cortical regions involved in perceiving object shape. Journal of Neuroscience, 20(9), 3310-3318.
+- Pickard, William; Sikes, Kelsey; Jamil, Huma et al. (2024). BOLD5000 Additional ROIs and RDMs for neural network research [Dataset]. Dryad. https://doi.org/10.5061/dryad.wpzgmsbtr
 - Rajimehr, R., Devaney, K. J., Bilenko, N. Y., Young, J. C., & Tootell, R. B. H. (2011). The ‘‘Parahippocampal Place Area’’Responds Preferentially to High Spatial.  
 - Schmolesky, M. T., Wang, Y., Hanes, D. P., Thompson, K. G., Leutgeb, S., Schall, J. D., & Leventhal, A. G. (1998). Signal timing across the macaque visual system. Journal of neurophysiology, 79(6), 3272-3278.  
 - Vann, S. D., Aggleton, J. P., & Maguire, E. A. (2009). What does the retrosplenial cortex do?. Nature reviews neuroscience, 10(11), 792-802.
