@@ -64,20 +64,18 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 
 ### Heatmaps
 
-#### Subject 1
-![Subject 1 Heatmap](subject1%20Heatmap.png)
-
-#### Subject 2
-![Subject 2 Heatmap](subject2%20Heatmap.png)
-
-#### Subject 3
-![Subject 3 Heatmap](subject3%20Heatmap.png)
-
-### Joint Heatmap
-![Joint Heatmap](Joint%20Heatmap%20(3%20subjects).png)
-
-### 3D RSA Surface
-![3D RSA Surface](3D%20RSA%20SURFACE.png)
+<table>
+  <tr>
+    <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
+    <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
+    <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
+  </tr>
+  <tr>
+    <td>Subject 1</td>
+    <td>Subject 2</td>
+    <td>Subject 3</td>
+  </tr>
+</table>
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
