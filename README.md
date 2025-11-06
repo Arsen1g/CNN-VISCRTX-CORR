@@ -129,12 +129,26 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 ## Key Findings
 
-##### Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
+#### Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
 <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
+<img src="Joint%20Heatmap%20(3%20subjects).png" alt="Joint Heatmap 3 Subjects" width="500"/>
 
-Early visual areas align primarily with lower-to-mid ResNet layers, while higher-level ROIs align with deeper layers.
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  <div>
+    <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
+    <p>3D RSA Surface</p>
+  </div>
+  <div>
+    <img src="Joint%20Heatmap%20(3%20subjects).png" alt="Joint Heatmap 3 Subjects" width="500"/>
+    <p>Joint Heatmap 3 Subjects</p>
+  </div>
+</div>
 
-These results indicate a clear hierarchical alignment between ResNet-50 layers and human visual cortical regions.
+
+#### Early visual areas align primarily with lower-to-mid ResNet layers, while higher-level ROIs align with deeper layers.
+<img src="ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
+
+These results indicate a  hierarchical alignment between ResNet-50 layers and human visual cortical regions.
 
 ---
 
