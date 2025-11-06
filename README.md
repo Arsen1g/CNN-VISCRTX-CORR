@@ -41,6 +41,8 @@ This analysis examines:
 
 The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
 
+<image-card alt="Visual Processing Timeline" src="visual-timeline.svg" ></image-card>
+
 ---
 
 ## Data
