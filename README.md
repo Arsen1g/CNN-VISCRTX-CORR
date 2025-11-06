@@ -79,11 +79,33 @@ Full dataset available on Dryad: [https://doi.org/10.5061/dryad.wpzgmsbtr](https
 
 ---
 
-## Methods
+# Methods & Key Findings
+ 
+Methods & Key Findings
 
-### Pattern Alignment
-- Extracted common images across all subjects and model: 2985 patterns  
-- Subsetted all RDMs to shared image patterns using **rsatoolbox**:
+Methods
+
+ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
+
+Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr').
+
+ROIs were grouped hierarchically:
+
+Early visual: LHEarlyVis, RHEarlyVis
+
+Mid-level: LHLOC, RHLOC, LHOPA, RHOPA
+
+High-level: LHPPA, RHPPA, LHRSC, RHRSC
+
+Mean ± SEM correlations were calculated across subjects and visualized via heatmaps, line plots, and scatter plots across layers.
+
+Key Findings
+
+Layer 3 of ResNet-50 shows the strongest RSA correlation with both early and higher visual ROIs.
+
+Early visual areas align primarily with lower-to-mid ResNet layers, while higher-level ROIs align with deeper layers.
+
+These results indicate a clear hierarchical alignment between ResNet-50 layers and human visual cortical regions.
 
 ---
 
