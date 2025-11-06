@@ -71,6 +71,12 @@ This project uses data derived from the BOLD5000 Additional ROIs and RDMs for Ne
 
 Full dataset available on Dryad: [https://doi.org/10.5061/dryad.wpzgmsbtr](https://doi.org/10.5061/dryad.wpzgmsbtr)
 
+### Datasets used for this study
+- ResNet50_CORR_RDMs.h5 
+- CSI1_BOLD5000_CORR_RDMs.h5 (*subject 1*)
+- CSI2_BOLD5000_CORR_RDMs.h5 (*subject 2*)
+- CSI3_BOLD5000_CORR_RDMs.h5 (*subject 3*)
+
 ---
 
 ## Methods
