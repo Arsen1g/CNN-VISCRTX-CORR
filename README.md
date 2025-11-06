@@ -45,12 +45,17 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 
 ## Data
 
+This project uses data derived from the BOLD5000 Additional ROIs and RDMs for Neural Network Research dataset
+(Pickard et al., 2023), a derivative of BOLD5000 Release 2.0 (Chang et al., 2021). The dataset extends the original BOLD5000 study by providing new region-of-interest (ROI) definitions, beta activation vectors, and representational dissimilarity matrices (RDMs)
+
 - **BOLD5000 fMRI dataset**: preprocessed ROI-level RDMs per subject  
 - **ResNet-50**: precomputed RDMs for each convolutional block/layer  
 - **Images**: 2985 images shared across subjects and model for alignment  
 - **ROIs**: 10 cortical regions, including EarlyVisual, LOC, OPA, PPA, RSC  
 
 **Note**: The repository does **not** include raw MRI or image data due to size and licensing restrictions. Scripts expect data paths for `.h5` files.
+
+Full dataset available on Dryad: [https://doi.org/10.5061/dryad.wpzgmsbtr](https://doi.org/10.5061/dryad.wpzgmsbtr)
 
 ---
 
