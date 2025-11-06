@@ -62,58 +62,45 @@ The goal is to quantify **hierarchical alignment** between DNN representations a
 
 ## Visualizations
 
-### Heatmaps
-
-<table>
-  <tr>
-    <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
-    <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
-    <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
-  </tr>
-  <tr>
-    <td>Subject 1</td>
-    <td>Subject 2</td>
-    <td>Subject 3</td>
-  </tr>
-</table>
-
-
-### Joint Heatmaps
+### Heatmaps & Bar Plots Side by Side
 
 <table>
 <tr>
-<td><img src="Joint%20Heatmap%20(3%20subjects).png" alt="Joint Heatmap" width="400"/></td>
+  <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
+  <td><img src="Subject1%20BarPlot.png" alt="Subject 1 Bar Plot" width="300"/></td>
 </tr>
 <tr>
-<td>Joint Heatmap (3 subjects)</td>
+  <td>Subject 1 Heatmap</td>
+  <td>Subject 1 Bar Plot</td>
+</tr>
+
+<tr>
+  <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
+  <td><img src="Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td>
+</tr>
+<tr>
+  <td>Subject 2 Heatmap</td>
+  <td>Subject 2 Bar Plot</td>
+</tr>
+
+<tr>
+  <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
+  <td><img src="Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td>
+</tr>
+<tr>
+  <td>Subject 3 Heatmap</td>
+  <td>Subject 3 Bar Plot</td>
 </tr>
 </table>
 
-### Bar Plots
+### Scatter Plots
 
-<table>
-<tr>
-<td><img src="Subject1%20BarPlot.png" alt="Subject 1 BarPlot" width="300"/></td>
-<td><img src="Subject2%20Barplot.png" alt="Subject 2 BarPlot" width="300"/></td>
-<td><img src="Subject3%20Barplot.png" alt="Subject 3 BarPlot" width="300"/></td>
-</tr>
-<tr>
-<td>Subject 1</td>
-<td>Subject 2</td>
-<td>Subject 3</td>
-</tr>
-</table>
+<img src="ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
 
 ### 3D RSA Surface
 
-<table>
-<tr>
-<td><img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/></td>
-</tr>
-<tr>
-<td>3D RSA Surface</td>
-</tr>
-</table>
+<img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
+
 
 ```python
 aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
