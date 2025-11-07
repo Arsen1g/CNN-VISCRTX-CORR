@@ -9,7 +9,7 @@ van den Bosch, J. J., Golan, T., Peters, B., Taylor, J., Shahbazi, M., Lin, B., 
 
 Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) Statistical inference on representational geometries eLife 12:e82566. https://doi.org/10.7554/eLife.82566
 
- <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
+ <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="100"/>
 
 ---
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
