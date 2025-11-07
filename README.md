@@ -7,7 +7,7 @@ This is an exploratory analysis and was conducted as a passion project which wou
 
 van den Bosch, J. J., Golan, T., Peters, B., Taylor, J., Shahbazi, M., Lin, B., Charest, I., Diedrichsen, J., Kriegeskorte, N., Mur, M., & Schuett, H. (2025). A Python Toolbox for Representational Similarity Analysis. bioRxiv. https://doi.org/10.1101/2025.05.22.655542
 
-Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) Statistical inference on representational geometries eLife 12:e82566. [https://doi.org/10.7554/eLife.82566_](https://doi.org/10.7554/eLife.82566)
+Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) Statistical inference on representational geometries eLife 12:e82566. https://doi.org/10.7554/eLife.82566
 
 ---
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
