@@ -25,7 +25,7 @@ https://doi.org/10.7554/eLife.82566_
 - [ROI Selection](#roi-selection)
 - [Model Preparation](#model-preparation)
 - [RSA Analysis](#rsa-analysis)
-- [Visualizations](#visualizations)
+- [Visualizations](#heatmap-and-bar-plot-Visualisations-of-pearson-r-correlation-per-each-Subject)
   - [Heatmaps](#heatmaps)
   - [Grouped Bar Plots](#grouped-bar-plots)
   - [Scatter Plots](#scatter-plots)
