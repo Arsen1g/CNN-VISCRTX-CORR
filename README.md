@@ -95,8 +95,8 @@ Methods
 ### 1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
 
 ```python
-aligned_rdms_data = rdms_data.subset_pattern('image', common_patterns)
-aligned_rdms_model = rdms_model.subset_pattern('image', common_patterns)
+aligned_rdms_BRAIN = rdms_data.subset_pattern('image', common_patterns)
+aligned_rdms_DNN = rdms_model.subset_pattern('image', common_patterns)
 ```
 
 ### 2. Fixed-model RSA was computed per ROI with eval_fixed(models, brain_rdm, method='corr'). Initial Analysis conducted RSA per subject, subsequent analyses grouped subject by shared stimuli type. One subject from the Pickard et al., (2023) was excluded due to limited sampling.
