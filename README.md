@@ -1,6 +1,6 @@
 # RSA Analysis: ResNet-50 vs BOLD5000
 
-This repository explains the analysis comparing **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the alignment between deep neural network layers and visual rois across multiple subjects.
+This repository explains the analysis comparing **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the alignment between deep neural network layers and visual rois across 3 subjects.
 
 This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's *Tutorial on Statistical Inference On Representational Geometries* at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
 
@@ -17,8 +17,10 @@ https://doi.org/10.7554/eLife.82566_
 ## Contents
 
 - [Motivation](#motivation)
+- [Representational Similarity Analysis (RSA)](#representational-similarity-analysis-rsa)
+- [Visual System Hierarchical Latencies](#visual-system-hierarchical-latencies)
 - [Data](#data)
-- [Methods](#Methods-&-Key-Findings)
+- [Methods](#methods)
 - [Pattern Alignment](#pattern-alignment)
 - [ROI Selection](#roi-selection)
 - [Model Preparation](#model-preparation)
@@ -34,11 +36,12 @@ https://doi.org/10.7554/eLife.82566_
 - [Requirements](#requirements)
 - [References](#references)
 
+
 ---
 
-## Motivation
+### Motivation
 
-Analysisng how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** and much broader objectives towards interperable analysis of Deep Neural Networks.
+Analysisng how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** and much broader objectives towards interperable analysis of Deep Neural Networks with biologically intelligent systems.
 
 This analysis examines:
 
@@ -48,6 +51,9 @@ This analysis examines:
 - **Layer-wise representations of ResNet-50 (5-Layers)**
 
 The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
+
+### Representational Similarity Analysis (RSA)
+
 
 ### Visual System Hierarchical Latencies
 
@@ -87,7 +93,7 @@ Participants:
 
 ---
 
-# Methods & Key Findings
+## Methods & Key Findings
 Methods
 
 ### 1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
@@ -122,6 +128,9 @@ for roi in subjects['subj1']:
         for m, v in zip(models, np.array(inference.eval_fixed(models, avg_rdm, method='corr').evaluations).flatten())
     )
 ```
+## Inferential Statistics Section
+
+
 
 ROIs were grouped hierarchically as per initial literature review (see section on Visual System Hierarchical Latencies)
 
