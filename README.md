@@ -1,7 +1,7 @@
 # RSA Analysis: ResNet-50 vs BOLD5000
 <img src="images/GITBANNER.png" alt="Git Banner" width="450"/>
 
-This repository explains the analysis comparing **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the alignment between deep neural network layers and visual rois across 3 subjects.
+This repository compares **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the alignment between deep neural network layers and visual rois across 3 subjects.
 
 This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's *Tutorial on Statistical Inference On Representational Geometries* at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
 
