@@ -1,7 +1,7 @@
 # RSA Analysis: ResNet-50 vs BOLD5000
 <img src="images/GITBANNER.png" alt="Git Banner" width="450"/>
 
-This repository compares **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)**. The study investigates the alignment between deep neural network layers and visual rois across 3 subjects.
+This repository compares **ResNet-50 model RDMs** with **human fMRI responses** from the **BOLD5000 dataset** using **Representational Similarity Analysis (RSA)** (Kriegeskorte, Mur & Bandettini, 2008).
 
 This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's *Tutorial on Statistical Inference On Representational Geometries* at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
 
@@ -37,21 +37,9 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 
 ## Motivation
 
-Being able to analyse how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** which draws on much broader questions and lines towards interperable analysis of DNNs.
+Being able to analyse how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** which draws on much broader questions towards interperable/ biological analysis of DNN architecture.
 
-This analysis examines:
-
-- **Early visual areas (V1/V2)**
-- **Mid-level visual areas (LOC, OPA)**
-- **High-level scene/object areas (PPA, RSC)**
-- **Layer-wise representations of ResNet-50 (5-Layers)**
-
-The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
-
-### Representational Similarity Analysis (RSA)
-
-
-### Visual System Hierarchical Latencies
+## Regions of Interest (ROI) Analysed in this study
 
 This table summarizes approximate onset latencies for key visual cortical areas in humans after seeing a stimulus. Latencies are based on EEG, MEG, and iEEG studies.
 
@@ -64,6 +52,18 @@ This table summarizes approximate onset latencies for key visual cortical areas 
 | **OPA (Occipital Place Area)** | ~240–300 ms | iEEG and MEG indicate scene layout discrimination in OPA emerges ~242–300 ms (Kamps et al., 2016; Baldassano et al., 2016). |
 | **RSC (Retrosplenial Complex)** | Poorly characterized: >400 ms | RSC relates to memory/navigation and allocentric coding; human onset latencies for visual stimuli are sparse therefor we do not expect to see much activation due to data and experiment collection (example: Epstein, 2008; Vann et al., 2009). |
 
+
+- **Early visual areas (V1/V2)**
+- **Mid-level visual areas (LOC, OPA)**
+- **High-level scene/object areas (PPA, RSC)**
+- **Layer-wise representations of ResNet-50 (5-Layers)**
+
+The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
+
+### Representational Similarity Analysis
+
+RSA first proposed and devised by Kriegeskorte, Mur & Bandettini (2008) addresses the corresponsancy problem of analysisng and comparing multi-modal imaging and data gathering types for brain imaging, behaviour, and cross specie comparisons. RSA is used by abstracting activity patterns via representational dissimilarity matrices (RDMs) using a "common currency" of pairwise dissimilarities across subject data. This approach ables the RSA to accounting for varying model/brain dimensionality, scale and noise of varying activity patterns allowing for direct comparison of cross-modal data. Seyed‑Mahdi Khaligh‑Razavi & Nikolaus Kriegeskorte (2014) well regarded study applieed the RSA to compare 37 computational vision models and their representations in primate IT cortex. The subsequent "suprising" similarity of adjacent studies and their equivalent findings (Kriegeskorte, 2015) allowed for new lines of research comparing neural networks with biological systems.
+ 
 ---
 
 ## Data
@@ -218,7 +218,8 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 - Di Russo, F., Martínez, A., Sereno, M. I., Pitzalis, S., & Hillyard, S. A. (2002). Cortical sources of the early components of the visual evoked potential. Human brain mapping, 15(2), 95-111.  
 - Epstein, R. A. (2008). Parahippocampal and retrosplenial contributions to human spatial navigation. Trends in cognitive sciences, 12(10), 388-396. 
 - Foxe, J. J., & Simpson, G. V. (2002). Flow of activation from V1 to frontal cortex in humans: A framework for defining" early" visual processing. Experimental brain research, 142(1), 139-150.  
-- Golarai, G., Liberman, A., Yoon, J. M., & Grill-Spector, K. (2010). Differential development of the ventral visual cortex extends through adolescence. Frontiers in human neuroscience, 3, 1057.  
+- Golarai, G., Liberman, A., Yoon, J. M., & Grill-Spector, K. (2010). Differential development of the ventral visual cortex extends through adolescence. Frontiers in human neuroscience, 3, 1057.
+- Kriegeskorte N, Mur M, Bandettini P. Representational similarity analysis - connecting the branches of systems neuroscience. Front Syst Neurosci. 2008 Nov 24;2:4.
 - Kamps, F. S., Julian, J. B., Kubilius, J., Kanwisher, N., & Dilks, D. D. (2016). The occipital place area represents the local elements of scenes. Neuroimage, 132, 417-424.
 - Kourtzi, Z., & Kanwisher, N. (2000). Cortical regions involved in perceiving object shape. Journal of Neuroscience, 20(9), 3310-3318.
 - Pickard, William; Sikes, Kelsey; Jamil, Huma et al. (2024). BOLD5000 Additional ROIs and RDMs for neural network research [Dataset].
