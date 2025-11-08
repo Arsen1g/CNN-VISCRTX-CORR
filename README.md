@@ -4,7 +4,8 @@ This repository explains the analysis comparing **ResNet-50 model RDMs** with **
 
 This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's *Tutorial on Statistical Inference On Representational Geometries* at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
 
-<img src="GITBANNER.png" width="500"/>
+<img src="images/GITBANNER.png" alt="Git Banner" width="800"/>
+
 
 
 van den Bosch, J. J., Golan, T., Peters, B., Taylor, J., Shahbazi, M., Lin, B., Charest, I., Diedrichsen, J., Kriegeskorte, N., Mur, M., & Schuett, H. (2025). A Python Toolbox for Representational Similarity Analysis. bioRxiv. https://doi.org/10.1101/2025.05.22.655542
