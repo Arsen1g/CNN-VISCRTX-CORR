@@ -58,8 +58,6 @@ This table summarizes approximate onset latencies for key visual cortical areas 
 - **High-level scene/object areas (PPA, RSC)**
 - **Layer-wise representations of ResNet-50 (5-Layers)**
 
-The goal is to quantify **hierarchical alignment** between DNN representations and brain activity.
-
 ### Representational Similarity Analysis
 
 RSA first proposed and devised by Kriegeskorte, Mur & Bandettini (2008) addresses the corresponsancy problem of analysisng and comparing multi-modal imaging and data gathering types for brain imaging, behaviour, and cross specie comparisons. RSA is used by abstracting activity patterns via representational dissimilarity matrices (RDMs) using a "common currency" of pairwise dissimilarities across subject data. This approach ables the RSA to accounting for varying model/brain dimensionality, scale and noise of varying activity patterns allowing for direct comparison of cross-modal data. Seyed‑Mahdi Khaligh‑Razavi & Nikolaus Kriegeskorte (2014) well regarded study applieed the RSA to compare 37 computational vision models and their representations in primate IT cortex. The subsequent "suprising" similarity of adjacent studies and their equivalent findings (Kriegeskorte, 2015) allowed for new lines of research comparing neural networks with biological systems.
