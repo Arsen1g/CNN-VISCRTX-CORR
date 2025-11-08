@@ -57,18 +57,18 @@ This table summarizes approximate onset latencies for key visual cortical areas 
 
 | Area | Approximate Onset / Selectivity Latency | Notes & References |
 |------|-----------------------------------------|------------------|
-| **V1** | ~30–60 ms | Earliest cortical activation in humans measured with MEG/VEF; reflects feedforward processing of low-level visual features (Foxe & Simpson, 2002; Di Russo et al., 2002). |
-| **V2** | ~40–70 ms | Latencies very close to V1; macaque studies show similar onset timing between V1 and V2 neurons (Schmolesky et al., 1998; Nowak et al., 1995). Human direct V2 latency data are less precise. |
-| **LOC (Lateral Occipital Complex)** | ~160–300 ms | ERP and iEEG studies show object shape selectivity emerging ~230 ms; TMS studies demonstrate causal involvement ~160–200 ms (Kourtzi & Kanwisher, 2000; Carlson et al., 2013). |
-| **PPA (Parahippocampal Place Area)** | ~80–170 ms | Intracranial recordings show early scene/place discrimination (~80–170 ms) depending on stimulus type and PPA sub-region (Rajimehr et al., 2011; Golarai et al., 2010). |
-| **OPA (Occipital Place Area)** | ~240–300 ms | iEEG and MEG studies indicate scene layout discrimination in OPA emerges ~242–300 ms (Kamps et al., 2016; Baldassano et al., 2016). |
-| **RSC (Retrosplenial Complex)** | Poorly characterized; likely >400 ms | RSC participates in memory/navigation and allocentric coding; human onset latencies for visual stimuli are sparse (Epstein, 2008; Vann et al., 2009). |
+| **V1** | ~30–60 ms | Earliest cortical activation measured with MEG/VEF; feedforward processing of low-level visual features (Foxe & Simpson, 2002; Di Russo et al., 2002). |
+| **V2** | ~30–70 ms | Latencies closely approximated to V1; macaque studies show similar onset timing between V1 and V2 neurons (Schmolesky et al., 1998; Nowak et al., 1995). |
+| **LOC (Lateral Occipital Complex)** | ~160–300 ms | Studies show object & shape selectivity ~230 ms; In line with TMS studies involvement ~160–200 ms (Kourtzi & Kanwisher, 2000; Carlson et al., 2013). |
+| **PPA (Parahippocampal Place Area)** | ~80–170 ms | Intracranials show early scene and place discrimination (~80–170 ms) depending on stimulus type/ PPA sub-region (Rajimehr et al., 2011; Golarai et al., 2010). |
+| **OPA (Occipital Place Area)** | ~240–300 ms | iEEG and MEG indicate scene layout discrimination in OPA emerges ~242–300 ms (Kamps et al., 2016; Baldassano et al., 2016). |
+| **RSC (Retrosplenial Complex)** | Poorly characterized: >400 ms | RSC relates to memory/navigation and allocentric coding; human onset latencies for visual stimuli are sparse therefor we do not expect to see much activation due to data and experiment collection (example: Epstein, 2008; Vann et al., 2009). |
 
 ---
 
 ## Data
 
-This analysis uses data derived from the BOLD5000 ROIs and RDMs for Neural Network Research dataset (Pickard et al., 2023), a derivative of BOLD5000 Release 2.0 (Chang et al., 2021). The dataset extends the original BOLD5000 study by providing new region-of-interest (ROI) definitions, beta activation vectors, and representational dissimilarity matrices (RDMs). Our study did not compute RDM Corrs.
+This analysis uses data from the BOLD5000 ROIs and RDMs for >400 *Neural Network Research dataset* (Pickard et al., 2023), developed from BOLD5000 Release 2.0 (Chang et al., 2021). This dataset extends the original by providing new region-of-interest (ROI) definitions, beta activation Vs, and representational dissimilarity matrices (RDMs). Our study did not compute RDM Corrs due to limited Brain and DNN stimuli correlation and computational limits.
 
 - **BOLD5000 fMRI dataset**: preprocessed ROI-level RDMs per subject
 - **ResNet-50**: precomputed RDMs for each convolutional block/layer 
@@ -128,7 +128,7 @@ for roi in subjects['subj1']:
 
 
 
-ROIs were grouped hierarchically as per initial literature review (see section on Visual System Hierarchical Latencies)
+ROIs were dditionally grouped hierarchically as per initial literature review, this was done to better visualise RSA relationship (see section on Visual System Hierarchical Latencies)
 
 Early visual: LHEarlyVis, RHEarlyVis
 Mid-level: LHLOC, RHLOC, LHOPA, RHOPA
