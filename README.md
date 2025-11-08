@@ -16,20 +16,11 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 ## Contents
 
 - [Motivation](#motivation)
-- [Representational Similarity Analysis (RSA)](#representational-similarity-analysis-rsa)
-- [Visual System Hierarchical Latencies](#visual-system-hierarchical-latencies)
-
+- [Regions of Interest (ROI) Analysed in this study](#Regions-of-Interest-(ROI)-Analysed-in-this-study)
+- [Representational Similarity Analysis (RSA)](#representational-similarity-analysis)
 - [Data](#data)
-- [Methods](#methods)
-- [Pattern Alignment](#pattern-alignment)
-- [ROI Selection](#roi-selection)
-- [Model Preparation](#model-preparation)
-- [RSA Analysis](#rsa-analysis)
-- [Results Summary](#results-summary)
-
+- [Methods & Key Findings](#methods-&-Key-Findings)
 - [Visualisations - per subject](#heatmap-and-bar-plot-Visualisations-of-pearson-r-correlation-per-each-Subject)
-
-- [Requirements](#requirements)
 - [References](#references)
 
 
