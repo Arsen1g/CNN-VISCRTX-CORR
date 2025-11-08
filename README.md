@@ -16,7 +16,7 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 ## Contents
 
 - [Motivation](#motivation)
-- [Regions of Interest (ROI) Analysed in this study](#Regions-of-Interest-(ROI)-Analysed-in-this-study)
+- [Visual Hierarchy - ROIs](#Regions-of-Interest)
 - [Representational Similarity Analysis (RSA)](#representational-similarity-analysis)
 - [Data](#data)
 - [Methods & Key Findings](#methods-&-Key-Findings)
@@ -30,7 +30,7 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 
 Being able to analyse how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** which draws on much broader questions towards interperable/ biological analysis of DNN architecture.
 
-## Regions of Interest (ROI) Analysed in this study
+## Regions of Interest
 
 This table summarizes approximate onset latencies for key visual cortical areas in humans after seeing a stimulus. Latencies are based on EEG, MEG, and iEEG studies.
 
