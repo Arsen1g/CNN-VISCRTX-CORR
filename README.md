@@ -37,7 +37,7 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 
 ## Motivation
 
-Analysisng how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** and much broader objectives towards interperable analysis of Deep Neural Networks with biologically intelligent systems.
+Being able to analyse how **deep neural networks (DNNs)** mirror human visual processing is a key question in **computational neuroscience** and **NeuroAI** which draws on much broader questions and lines towards interperable analysis of DNNs.
 
 This analysis examines:
 
