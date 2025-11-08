@@ -127,7 +127,11 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 ## Key Findings
 
-#### Layer 3 of ResNet-50 shows the strongest RSA correlation across all ROIs.
+#### 1. Layer 3 of ResNet-50 shows the strongest RSA r- correlation across all ROIs, indicating it the most representially similar to the human visual cortex in this analysis.
+#### 2. Early visual areas (V1/V2) aligned most closely with lower to mid-level ResNet layers (1–2), reflecting a hierarchical correspondence between early visual processing in the brain and the model’s lower convolutional layers.
+#### 3. Mid- and high-level ROIs (LOC, OPA) showed a “bounce-back” effect, with increased r-correlations observed in mid to later ResNet layers, suggesting a re-emergence of representational similarity at deeper levels. 
+#### 4. A decline in correlation was observed at ResNet layer 4 across all of our ROIs, possibly reflecting representational divergence across both model spaces (as noted by Khaligh-Razavi & Kriegeskorte, 2014) or methodological limitations. such as the lack of covariance-aware modeling during RDM pre-processing, which may have introduced noise for more subtle activations.
+#### 5. Lowest representational ROI was Retrosplenial Complex (RSC) relating to memory/navigation and allocentric coding; which is not operationalised in BOLD500 dataset thus expected.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
   <div>
@@ -139,9 +143,6 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
     <p>Joint Heatmap 3 Subjects</p>
   </div>
 </div>
-
-
-#### Early visual areas (v1/v2) initially align with lower-to-mid ResNet layers 1/2, while higher-level ROIs align "bouncback" with larger r- correlations observed towards mid to later levels of ResNet layers. A drop off is observed at ResNet layer 4 which is possibly attributed towards representational divergence (i.e. (Seyed‑Mahdi Khaligh‑Razavi & Nikolaus Krieg­eskorte, 2014), or lack therof to implemennting covariance aware/ flexible models constituting a methadological limitation of using pre-computed RDMs.
 
 <img src="images/ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
 
