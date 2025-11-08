@@ -28,6 +28,19 @@ This is an exploratory analysis and was conducted as a passion project which wou
   </div>
 </div>
 
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="vertical-align: top; padding-right: 20px; max-width: 500px;">
+      This repository explains the analysis comparing <b>ResNet-50 model RDMs</b> with <b>human fMRI responses</b> from the <b>BOLD5000 dataset</b> using <b>Representational Similarity Analysis (RSA)</b>. The study investigates the alignment between deep neural network layers and visual ROIs across 3 subjects.<br><br>
+      This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's <i>Tutorial on Statistical Inference On Representational Geometries</i> at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
+    </td>
+    <td>
+      <img src="images/GITBANNER.png" alt="Git Banner" width="600"/>
+    </td>
+  </tr>
+</table>
+
+
 
 
 
