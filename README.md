@@ -6,22 +6,17 @@ This is an exploratory analysis and was conducted as a passion project which wou
 
 <img src="images/GITBANNER.png" alt="Git Banner" width="600"/>
 
-<table style="border-collapse: collapse; width: 50%;">
+<table>
   <tr>
-    <td style="vertical-align: top; padding-right: 20px; max-width: 600px;">
-      <p>
-        This repository explains the analysis comparing <b>ResNet-50 model RDMs</b> with <b>human fMRI responses</b> from the <b>BOLD5000 dataset</b> using <b>Representational Similarity Analysis (RSA)</b>. The study investigates the alignment between deep neural network layers and visual ROIs across 3 subjects.
-      </p>
-      <p>
-        This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's <i>Tutorial on Statistical Inference On Representational Geometries</i> at NYU MITCBMM and demos provided by the RSA toolbox development group (van den Bosch et al., 2025).
-      </p>
+    <td style="vertical-align: top; padding-right: 10px; max-width: 1000px;">
+      This repository explains the analysis comparing <b>ResNet-50 model RDMs</b> with <b>human fMRI responses</b> from the <b>BOLD5000 dataset</b> using <b>Representational Similarity Analysis (RSA)</b>. The study investigates the alignment between deep neural network layers and visual ROIs across 3 subjects.<br><br>
+      This is an exploratory analysis and was conducted as a passion project which would not have been possible without Heiko H Schütt's <i>Tutorial on Statistical Inference On Representational Geometries</i> at NYU MITCBMM and Demos provided RSA toolbox by the RSA development group (van den Bosch et al., 2025).
     </td>
-    <td style="vertical-align: top;">
-      <img src="images/GITBANNER.png" alt="Git Banner" width="700"/>
+    <td>
+      <img src="images/GITBANNER.png" alt="Git Banner" width="600"/>
     </td>
   </tr>
 </table>
-
 
 
 van den Bosch, J. J., Golan, T., Peters, B., Taylor, J., Shahbazi, M., Lin, B., Charest, I., Diedrichsen, J., Kriegeskorte, N., Mur, M., & Schuett, H. (2025). A Python Toolbox for Representational Similarity Analysis. bioRxiv. https://doi.org/10.1101/2025.05.22.655542
