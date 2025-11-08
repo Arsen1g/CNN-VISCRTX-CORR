@@ -15,13 +15,13 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 
 ## Contents
 
-- [Motivation](#motivation)
-- [Visual Hierarchy - ROIs](#Regions-of-Interest)
-- [Representational Similarity Analysis (RSA)](#representational-similarity-analysis)
-- [Data](#data)
-- [Methods & Key Findings](#Methods-and-Key-Findings)
-- [Visualisations - per subject](#heatmap-and-bar-plot-Visualisations-of-pearson-r-correlation-per-each-Subject)
-- [References](#references)
+1. [Motivation](#motivation)
+2. [Visual Hierarchy - ROIs](#Regions-of-Interest)
+3. [Representational Similarity Analysis (RSA)](#representational-similarity-analysis)
+4. [Data](#data)
+5. [Methods & Key Findings](#Methods-and-Key-Findings)
+6. [Visualisations - per subject](#heatmap-and-bar-plot-Visualisations-of-pearson-r-correlation-per-each-Subject)
+7. [References](#references)
 
 
 ---
