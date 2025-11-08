@@ -19,7 +19,7 @@ Heiko H Schütt Alexander D KipnisJörn DiedrichsenNikolaus Kriegeskorte (2023) 
 - [Visual Hierarchy - ROIs](#Regions-of-Interest)
 - [Representational Similarity Analysis (RSA)](#representational-similarity-analysis)
 - [Data](#data)
-- [Methods & Key Findings](#methods-&-Key-Findings)
+- [Methods & Key Findings](#Methods-and-Key-Findings)
 - [Visualisations - per subject](#heatmap-and-bar-plot-Visualisations-of-pearson-r-correlation-per-each-Subject)
 - [References](#references)
 
@@ -78,7 +78,7 @@ Participants:
 
 ---
 
-## Methods & Key Findings
+## Methods and Key Findings
 Methods
 
 ### 1. ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
