@@ -142,11 +142,11 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
   <div>
-    <img src="3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
+    <img src="images/3D%20RSA%20SURFACE.png" alt="3D RSA Surface" width="500"/>
     <p>3D RSA Surface</p>
   </div>
   <div>
-    <img src="Joint%20Heatmap%20(3%20subjects).png" alt="Joint Heatmap 3 Subjects" width="500"/>
+    <img src="images/Joint%20Heatmap%20(3%20subjects).png" alt="Joint Heatmap 3 Subjects" width="500"/>
     <p>Joint Heatmap 3 Subjects</p>
   </div>
 </div>
@@ -154,7 +154,7 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
 #### Early visual areas (v1/v2) initially align with lower-to-mid ResNet layers 1/2, while higher-level ROIs align "bouncback" with larger r- correlations observed towards mid to later levels of ResNet layers. A drop off is observed at ResNet layer 4 which is possibly attributed towards representational divergence (i.e. (Seyed‑Mahdi Khaligh‑Razavi & Nikolaus Krieg­eskorte, 2014), or lack therof to implemennting covariance aware/ flexible models constituting a methadological limitation of using pre-computed RDMs.
 
-<img src="ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
+<img src="images/ScatterPlot%20Subset%20ROI.png" alt="Scatter Plot" width="500"/>
 
 ---
 
@@ -165,8 +165,8 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
   <table>
     <tr>
-      <td><img src="subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
-      <td><img src="Subject1%20BarPlot.png" alt="Subject 1 Bar Plot" width="300"/></td>
+      <td><img src="images/subject1%20Heatmap.png" alt="Subject 1 Heatmap" width="300"/></td>
+      <td><img src="images/Subject1%20BarPlot.png" alt="Subject 1 Bar Plot" width="300"/></td>
     </tr>
     <tr>
       <td>Subject 1 Heatmap</td>
@@ -181,8 +181,8 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
   <table>
     <tr>
-      <td><img src="subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
-      <td><img src="Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td>
+      <td><img src="images/subject2%20Heatmap.png" alt="Subject 2 Heatmap" width="300"/></td>
+      <td><img src="images/Subject2%20Barplot.png" alt="Subject 2 Bar Plot" width="300"/></td>
     </tr>
     <tr>
       <td>Subject 2 Heatmap</td>
@@ -197,8 +197,8 @@ Mean ± SEM correlations were calculated across subjects and visualized via heat
 
   <table>
     <tr>
-      <td><img src="subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
-      <td><img src="Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td>
+      <td><img src="images/subject3%20Heatmap.png" alt="Subject 3 Heatmap" width="300"/></td>
+      <td><img src="images/Subject3%20Barplot.png" alt="Subject 3 Bar Plot" width="300"/></td>
     </tr>
     <tr>
       <td>Subject 3 Heatmap</td>
