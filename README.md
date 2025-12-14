@@ -112,7 +112,7 @@ for roi in subjects['subj1']:
         for m, v in zip(models, np.array(inference.eval_fixed(models, avg_rdm, method='corr').evaluations).flatten())
     )
 ```
-## Inferential Statistics Section
+## Analysis Section
 
 ROIs were dditionally grouped hierarchically as per initial literature review, this was done to better visualise RSA relationship (see section on Visual System Hierarchical Latencies)
 
