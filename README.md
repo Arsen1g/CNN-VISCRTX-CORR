@@ -80,25 +80,6 @@ Participants:
 ---
 
 ## Methods and Key Findings
-#### Requirements
-
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-.DS_Store
-
-# outputs
-outputs/
-*.csv
-*.png
-*.pdf
-
-# environments
-.env
-.venv
-env/
-venv/
-
 
 #### ROI RDMs from BOLD5000 fMRI data were aligned with ResNet-50 model RDMs using 2985 common images across subjects.
 
